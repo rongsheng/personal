@@ -1,0 +1,48 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+      <h4 class="modal-title" id="model-title">User Details</h4>
+    </div>
+    <div id="model-body" class="modal-body">
+      <div class="row">
+        <div class="col-md-3 image-wrapper">
+          <img class="img-circle" src="/images/photo.png" alt="User Pic">
+        </div>
+        <div class="col-md-9">
+            <h3><strong><%- data.first_name %> <%- data.last_name %></strong></h3>
+            <table class="table table-condensed table-responsive table-user-information">
+                <tbody>
+                <tr>
+                    <td>Current Role:</td>
+                    <td><strong><%- data.title %></strong> in <%- data.dept_name %> Department</td>
+                </tr>
+                <tr>
+                    <td>Service Period:</td>
+                    <td>
+                      <div><%- data.hire_date %> - <%- data.to_date %></div>
+                      <div>More than <%- Math.floor(data.emp_year) %> year(s)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Birth:</td>
+                    <td><%- data.birth_date %> (Age: <%- data.age %>)</td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><%- data.gender %></td>
+                </tr>
+                <tr>
+                    <td>Salary:</td>
+                    <td>$<%- data.salary %> / yr</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> OK</button>
+    </div>
+  </div>
+</div>
