@@ -1,0 +1,45 @@
+/**
+ * Login View Stylesheet
+ */
+
+// Bootstrap Cores
+@import "./bootstrap/variables.less";
+@import "./bootstrap/mixins.less";
+@import "./bootstrap/normalize.less";
+@import "./bootstrap/print.less";
+@import "./bootstrap/scaffolding.less";
+@import "./bootstrap/type.less";
+@import "./bootstrap/code.less";
+@import "./bootstrap/grid.less";
+@import "./bootstrap/tables.less";
+@import "./bootstrap/forms.less";
+@import "./bootstrap/buttons.less";
+@import "./bootstrap/panels.less";
+@import "./bootstrap/glyphicons.less";
+@import "./bootstrap/utilities.less";
+@import "./bootstrap/responsive-utilities.less";
+
+// Modules
+@import "./modules/cloud.less";
+
+@grid-columns:              12;
+@grid-gutter-width:         30px;
+@grid-float-breakpoint:     768px;
+
+.scene {
+    .make-row();
+    margin: 0;
+    padding: 0;
+    li {
+        padding: 0px;
+        list-style-type: none;
+    }
+}
+.cloud-background {
+	background-color: #31bef3;
+    background-size: cover;
+    height: 704px;
+    .make-sm-column(12);
+    .make-xs-column(12);
+    z-index: 1;
+}
