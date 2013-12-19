@@ -1,0 +1,57 @@
+//Fonts
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Alegreya Sans Light'), local('AlegreyaSans-Light'),
+       url(/static-assets/fonts/AlegreyaSans-Thin.woff) format('woff'),
+       url(/static-assets/fonts/AlegreyaSans-Thin.ttf) format('truetype');
+}
+
+.carousel-metro {
+    .carousel-caption {
+        right: 5%;
+        width: 30%;
+        margin-bottom: 5%;
+        min-height: 200px;
+        left: 65%;
+        visibility: hidden;
+        opacity: 0.8;
+        &.visible {
+          visibility: visible;
+        }
+        &.color-salmon {
+          background-color: lightsalmon;
+        }
+        &.color-lightseagreen {
+          background-color: lightseagreen;
+        }
+        &.color-darkslateblue {
+          background-color: darkslateblue;
+        }
+        &.color-blueviolet {
+          background-color: blueviolet;
+        }
+        .caption-title, .caption-subtitle {
+          padding-left: 20px;
+          padding-right: 20px;
+          text-shadow: none;
+          text-align: left;
+          visibility: hidden;
+          font-family: 'Alegreya Sans', sans-serif;
+          &.visible {
+            visibility: visible;
+          }
+        }
+        .caption-title {
+          font-size: 54px;
+        }
+        .caption-subtitle {
+          font-size: 28px;
+        }
+    }
+
+    img {
+      width: 100%;
+    }
+}
