@@ -10,38 +10,75 @@
 
 {% block content %}
     <div id="carousel-wrapper">
-        <div id="carousel-headline" class="carousel carousel-metro slide" data-ride="carousel" data-interval="5000">
+        <div id="carousel-headline" class="carousel carousel-metro slide">
             <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-headline" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-headline" data-slide-to="1"></li>
+                <li data-target="#carousel-headline" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="item active">
                     <img data-desktop="{{ STATIC_URL }}image/lifestyle-browse.jpg"
                         data-mobile="/static/image/lifestyle-browse-mobile.jpg" alt="browse">
-                    <div class="carousel-caption color-lightseagreen">
-                        <h3 class="caption-title">Hey Snow!</h3>
-                        <p class="caption-subtitle">Greetings from Sheldon.</p>
+                    <div class="carousel-caption color-brand">
+                        <h3 class="caption-title">Meet Sheldon</h3>
+                        <p class="caption-subtitle">Web designer based in Sydney. Code fast, code elegantly!</p>
                     </div>
                 </div>
                 <div class="item">
                     <img data-desktop="{{ STATIC_URL }}image/lifestyle-discover.jpg"
-                        data-mobile="/static/image/lifestyle-discover-mobile.jpg" alt="discover">
-                    <div class="carousel-caption color-darkslateblue">
-                        <h3 class="caption-title">Enjoy Laughing</h3>
-                        <p class="caption-subtitle">They are happy citizens live in the Kingdom, you should be one two.</p>
+                        data-mobile="/static/image/lifestyle-discover-mobile.jpg" alt="browse">
+                    <div class="carousel-caption color-cyan">
+                        <h3 class="caption-title">View Portfolios</h3>
+                        <p class="caption-subtitle">Jump in the works I've done before.</p>
                     </div>
                 </div>
                 <div class="item">
                     <img data-desktop="{{ STATIC_URL }}image/lifestyle-listen-free.jpg"
                         data-mobile="/static/image/lifestyle-listen-free-mobile.jpg" alt="free">
                     <div class="carousel-caption color-blueviolet">
-                        <h3 class="caption-title">No Speed Limit</h3>
-                        <p class="caption-subtitle">Driving too fast and crazy? Promoted!</p>
+                        <h3 class="caption-title">Contact Me</h3>
+                        <p class="caption-subtitle">Leave a note, send me an email or try 'Chat Now'.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div id="about-me" class="info-section color-lightgrey">
+        <div class="intro">Greetings from Sheldon, a web developer in Sydney.</div>
+        <ul>
+            <li>
+                <div class="caption">I hold a master degree in</div>
+                <div class="content">E-Commerce and AI,
+                    <a href="http://www.cse.unsw.edu.au/">CSE</a>,
+                    <a href="http://www.unsw.edu.au/">UNSW</a></div>
+            </li>
+            <li>
+                <div class="caption">I have developed my skills around</div>
+                <div class="content">PHP, Python, HTML5, JavaScript, CSS3, MySQL, ElasticSearch</div>
+            </li>
+            <li>
+                <div class="caption">I have also used</div>
+                <div class="content">CodeIgniter, Django, LESS, Bootstrap, Backbone, Memcached, Redis, Vagrant</div>
+                <div class="caption">during my work or when developing an interest.</div>
+            </li>
+            <li>
+                <div class="caption">I currently work at </div>
+                <div class="content"><a href="http://www.freelancer.com/">Freelancer.com</a></div>
+            </li>
+        </ul>
+    </div>
+    <div id="range-of-interest" class="info-section">
+        <div class="intro">Enjoy developing, in a range of aspects.</div>
+        <ul>
+            <li>
+                <div class="caption">Though I mostly work as web developer, my interest is wider.</div>
+                <div class="content">Cocoa, Android, OpenNI, OpenCL, Unity, etc.</div>
+                <div class="caption">I had a lot of fun digging into it.</div>
+            </li>
+        </ul>
+    </div>
+    <div id="contact-me" class="info-section">
+
     </div>
 {% endblock %}

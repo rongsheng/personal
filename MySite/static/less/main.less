@@ -12,6 +12,8 @@
 @import "./bootstrap/code.less";
 @import "./bootstrap/grid.less";
 @import "./bootstrap/buttons.less";
+@import "./bootstrap/button-groups.less";
+@import "./bootstrap/dropdowns.less";
 @import "./bootstrap/carousel.less";
 @import "./bootstrap/forms.less";
 @import "./bootstrap/component-animations.less";
@@ -20,14 +22,37 @@
 @import "./bootstrap/utilities.less";
 @import "./bootstrap/responsive-utilities.less";
 
+// Variables
+@import "./variables.less";
+
 // IcoMoon Fonts
 @import "./utils/icomoon.less";
 
 // Animation
 @import "./utils/animated.custom.less";
 
+//Fonts
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Alegreya Sans Light'), local('AlegreyaSans-Light'),
+       url(/static/fonts/AlegreyaSans-Thin.woff) format('woff'),
+       url(/static/fonts/AlegreyaSans-Thin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merienda Bold'), local('Merienda-Bold'),
+       url(/static/fonts/Merienda-Bold.woff) format('woff'),
+       url(/static/fonts/Merienda-Bold.ttf) format('truetype');
+}
+
 // Modules
 @import "./modules/header.less";
+@import "./modules/about-me.less";
 @import "./modules/carousel-metro-style.less";
 
 @grid-columns:              12;

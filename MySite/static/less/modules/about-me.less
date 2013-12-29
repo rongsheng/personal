@@ -1,0 +1,41 @@
+.info-section {
+    &.color-lightgrey {
+        background-color: #f4f4f4;
+    }
+
+    a {
+      color: #444444;
+    }
+    color: #444444;
+    padding: 40px 0;
+    .intro {
+        margin: 10px 0;
+        font-family: 'Alegreya Sans', sans-serif;
+        font-size: 50px;
+        text-align: center;
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        li {
+            padding: 20px 0;
+            .caption {
+                font-family: 'Alegreya Sans', sans-serif;
+                font-size: 22px;
+                text-align: center;
+                padding: 5px 0;
+                color: @link-color;
+            }
+
+            .content {
+                font-family: 'Merienda', sans-serif;
+                font-size: 28px;
+                text-align: center;
+                color: #666666;
+            }
+        }
+    }
+}

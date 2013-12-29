@@ -1,13 +1,3 @@
-//Fonts
-@font-face {
-  font-family: 'Alegreya Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Alegreya Sans Light'), local('AlegreyaSans-Light'),
-       url(/static/fonts/AlegreyaSans-Thin.woff) format('woff'),
-       url(/static/fonts/AlegreyaSans-Thin.ttf) format('truetype');
-}
-
 .carousel-metro {
     .carousel-caption {
        visibility: hidden;
@@ -15,17 +5,14 @@
        &.visible {
            visibility: visible;
        }
-       &.color-salmon {
-           background-color: lightsalmon;
-       }
-       &.color-lightseagreen {
-           background-color: lightseagreen;
-       }
-       &.color-darkslateblue {
-           background-color: darkslateblue;
+       &.color-brand {
+           background-color: @brand-primary;
        }
        &.color-blueviolet {
            background-color: blueviolet;
+       }
+       &.color-cyan {
+           background-color: #00BBF1;
        }
        .caption-title, .caption-subtitle {
           text-shadow: none;
