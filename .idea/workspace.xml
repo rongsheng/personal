@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee36b014-abb5-48ba-a028-a4969f8d52e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/static/less/modules/about-me.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/static/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/templates/base.html" afterPath="$PROJECT_DIR$/MySite/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/static/less/modules/carousel-metro-style.less" afterPath="$PROJECT_DIR$/MySite/static/less/modules/carousel-metro-style.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/static/js/apps/main/carousel.js" afterPath="$PROJECT_DIR$/MySite/static/js/apps/main/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/templates/Main/index.html" afterPath="$PROJECT_DIR$/MySite/templates/Main/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/static/less/main.less" afterPath="$PROJECT_DIR$/MySite/static/less/main.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/static/less/bootstrap/variables.less" afterPath="$PROJECT_DIR$/MySite/static/less/bootstrap/variables.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="personal.iws" />
@@ -653,7 +645,11 @@
       <created>1388319365340</created>
       <updated>1388319365340</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="continue building the home page.">
+      <created>1388332442614</created>
+      <updated>1388332442614</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -690,7 +686,8 @@
     </option>
     <MESSAGE value="structural change" />
     <MESSAGE value="add original layout back (a.k.a. integrate django into the original layout)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add original layout back (a.k.a. integrate django into the original layout)" />
+    <MESSAGE value="continue building the home page." />
+    <option name="LAST_COMMIT_MESSAGE" value="continue building the home page." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
