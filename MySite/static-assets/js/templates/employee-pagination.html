@@ -1,9 +1,0 @@
-<div class="col-md-5 page-info">
-    Showing page <span id="start-page"></span> of <span id="total-page"></span>
-</div><ul class="pagination">
-  <li><a class="first">&laquo;</a></li>
-  <% for (var i = start + 1; i <= end; i++) { %>
-  <li class="inner <% if (i == index + 1) { %>active<% } %>"><a><%- i %></a></li>
-  <% } %>
-  <li><a class="last">&raquo;</a></li>
-</ul>

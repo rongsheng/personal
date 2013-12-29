@@ -30,5 +30,4 @@
       clearTimeout(id);
     };
   }
-
 }());

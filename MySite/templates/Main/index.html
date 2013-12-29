@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block page-style %}
+    <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}less/main.less">
+{% endblock %}
+
+{% block requirejs %}
+    <script data-main="{{ STATIC_URL }}js/apps/main/start" src="{{ STATIC_URL }}js/utils/require.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="carousel-wrapper">
+        <div id="carousel-headline" class="carousel carousel-metro slide" data-ride="carousel" data-interval="5000">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img data-desktop="{{ STATIC_URL }}image/lifestyle-browse.jpg"
+                        data-mobile="/static/image/lifestyle-browse-mobile.jpg" alt="browse">
+                    <div class="carousel-caption color-lightseagreen">
+                        <h3 class="caption-title">Hey Snow!</h3>
+                        <p class="caption-subtitle">Greetings from Sheldon.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img data-desktop="{{ STATIC_URL }}image/lifestyle-discover.jpg"
+                        data-mobile="/static/image/lifestyle-discover-mobile.jpg" alt="discover">
+                    <div class="carousel-caption color-darkslateblue">
+                        <h3 class="caption-title">Enjoy Laughing</h3>
+                        <p class="caption-subtitle">They are happy citizens live in the Kingdom, you should be one two.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img data-desktop="{{ STATIC_URL }}image/lifestyle-listen-free.jpg"
+                        data-mobile="/static/image/lifestyle-listen-free-mobile.jpg" alt="free">
+                    <div class="carousel-caption color-blueviolet">
+                        <h3 class="caption-title">No Speed Limit</h3>
+                        <p class="caption-subtitle">Driving too fast and crazy? Promoted!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Sheldon Rong - Web developer based in Sydney{% endblock %}</title>
+    {% block page-style %}{% endblock %}
+    <script src="{{STATIC_URL}}js/utils/less.js"></script>
+    {% block requirejs %}{% endblock %}
+</head>
+<body>
+    <header id="site-header" class="navbar navbar-fixed-top" role="banner">
+        <div class="container" >
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="icon-menu mobile-menu"></span>
+                </button>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="../getting-started">
+                            <span class="icon-home"></span> </span>
+                            <strong>Sheldon Rong</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../getting-started">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../search">
+                           <span class="icon-bubble2"></span></span>
+                            Live Chat
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content" id="site-content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="{{STATIC_URL}}js/utils/jquery.js"></script>
+    <script src="{{STATIC_URL}}js/utils/bootstrap.js"></script>
+    {% block js-libs %}
+    {% endblock %}
+</body>
+</html>
