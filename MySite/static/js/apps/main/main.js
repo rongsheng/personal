@@ -22,4 +22,15 @@ define(['utils/jquery',
             }
         }
     });
+
+    $(document).ready(function() {
+        $('#contact-submit').click(function() {
+            //validate user inputs
+
+            //send requests to server
+            $.ajax({
+                url:
+            });
+        });
+    });
 });
