@@ -1,4 +1,7 @@
 .info-section {
+    &.center {
+        text-align: center;
+    }
     &.color-lightgrey {
         background-color: #f4f4f4;
     }
@@ -37,5 +40,74 @@
                 color: #666666;
             }
         }
+    }
+
+    .contact-section {
+        max-width: 480px;
+        margin: 10px auto;
+        text-align: center;
+
+        .content {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 28px;
+            text-align: center;
+            color: @link-color;
+        }
+
+        input {
+            text-align: center;
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 22px;
+            height: 42px;
+            padding: auto 15px;
+        }
+
+        textarea {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 22px;
+            height: 132px;
+        }
+
+        .send-enquiry {
+            .btn;
+            .btn-primary;
+            .btn-lg;
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 22px;
+        }
+    }
+}
+
+.section-card {
+    text-align: center;
+    margin: auto 15px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    background: #ffffff;
+    overflow: hidden;
+    width: 25%;
+    display: inline-block;
+    min-height: 600px;
+    @media (max-width: 768px) {
+        margin: auto 10px;
+        width: 100%;
+    }
+    .caption {
+        font-family: 'Alegreya Sans', sans-serif;
+        font-size: 28px;
+        text-align: center;
+        padding: 10px 0;
+        color: @link-color;
+    }
+    .info-section {
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+    .chat-now {
+         .btn;
+         .btn-primary;
+         .btn-lg;
+         font-family: 'Alegreya Sans', sans-serif;
+         font-size: 22px;
     }
 }

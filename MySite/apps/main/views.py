@@ -1,6 +1,6 @@
 from MySite.apps.shared.base_view import BaseView
 from django.shortcuts import render
-
+from django.views.decorators.csrf import csrf_protect
 
 class MainView(BaseView):
     template_name = 'Main/index.html'

@@ -67,7 +67,6 @@ define(['utils/jquery',
                 }
             }
             $el.on('slid.bs.carousel', function () {
-                console.log('SLIDING');
                 animate($el);
             });
             $el.carousel({

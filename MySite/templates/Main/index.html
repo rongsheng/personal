@@ -59,7 +59,7 @@
             </li>
             <li>
                 <div class="caption">I have also used</div>
-                <div class="content">CodeIgniter, Django, LESS, Bootstrap, Backbone, Memcached, Redis, Vagrant</div>
+                <div class="content">CodeIgniter, Django, LESS, Bootstrap, Backbone, RequireJS, Memcached, Redis, Vagrant</div>
                 <div class="caption">during my work or when developing an interest.</div>
             </li>
             <li>
@@ -78,7 +78,37 @@
             </li>
         </ul>
     </div>
-    <div id="contact-me" class="info-section">
 
+    <div id="range-of-interest" class="info-section center color-lightgrey">
+        <div class="intro">Contact</div>
+        <div id="drop-note-card" class="section-card">
+            <div class="caption">Drop me a note</div>
+            <form id="get-in-touch" class="info-section" role="form" method="POST">{% csrf_token %}
+                <div class="contact-section">
+                    <div class="form-group">
+                        <div class="content">Name</div>
+                        <input type="text" class="form-control" id="contact-name">
+                    </div>
+                    <div class="form-group">
+                        <div class="content">Company</div>
+                        <input type="text" class="form-control" id="contact-company">
+                    </div>
+                    <div class="form-group">
+                        <div class="content">Email</div>
+                        <input type="email" class="form-control" id="contact-email">
+                    </div>
+                    <div class="form-group">
+                        <div class="content">Enquiry</div>
+                        <textarea id="contact-enquiry" class="form-control"></textarea>
+                    </div>
+                    <button value="Submit" id="contact-submit" class="send-enquiry" autocomplete="off">Send</button>
+                </div>
+            </form>
+        </div>
+        <div id="chat-now-card" class="section-card">
+            <div class="caption">Chat Now</div>
+            <div class="caption">Online.</div>
+            <div class="chat-now">Chat Now</div>
+        </div>
     </div>
 {% endblock %}
