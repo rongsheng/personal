@@ -1,9 +1,11 @@
-from MySite.apps.shared.base_view import BaseView
-from Mysite.apps.main.models import Enquiry
-from django.shortcuts import render, get_object_or_404
+import json
+
+from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.http import HttpResponse
-import json
+
+from MySite.apps.shared.base_view import BaseView
+from MySite.apps.main.forms import EnquiryForm
 
 
 class MainView(BaseView):
@@ -16,9 +18,20 @@ class MainView(BaseView):
 class SubmitView(TemplateView):
     def post(self, request):
         try:
-            enquiry = Enquiry(request.POST)
-            enquiry.save()
-            return HttpResponse()
-        except:
-            response_data = {'status': 'failed', 'message': 'Failed to send your enquiry, please try again.'}
+            form = EnquiryForm(request.POST)
+            if form.is_valid():
+                form.save()
+                response_data = {'status': 'success'}
+                return HttpResponse(json.dumps(response_data), content_type="application/json")
+            else:
+                response_data = {
+                    'status': 'failed',
+                    'errors': form.errors,
+                }
+                return HttpResponse(json.dumps(response_data), content_type="application/json")
+        except Exception, ex:
+            response_data = {
+                'status': 'failed',
+                'error': str(ex)
+            }
             return HttpResponse(json.dumps(response_data), content_type="application/json")

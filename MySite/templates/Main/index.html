@@ -5,6 +5,14 @@
 {% endblock %}
 
 {% block requirejs %}
+    <script src="http://localhost/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect('http://localhost');
+      socket.on('news', function (data) {
+        console.log(data);
+        socket.emit('my other event', { my: 'data' });
+      });
+    </script>
     <script data-main="{{ STATIC_URL }}js/apps/main/start" src="{{ STATIC_URL }}js/utils/require.js"></script>
 {% endblock %}
 
@@ -83,32 +91,39 @@
         <div class="intro">Contact</div>
         <div id="drop-note-card" class="section-card">
             <div class="caption">Drop me a note</div>
+            <div>Items with asterisks(*) are required.</div>
             <form id="get-in-touch" class="info-section" role="form" method="POST">{% csrf_token %}
                 <div class="contact-section">
                     <div class="form-group">
-                        <div class="content">Name</div>
-                        <input type="text" class="form-control" id="contact-name">
+                        <div class="content">Name *</div>
+                        <input type="text" class="form-control" id="contact-name" name="name">
                     </div>
                     <div class="form-group">
                         <div class="content">Company</div>
-                        <input type="text" class="form-control" id="contact-company">
+                        <input type="text" class="form-control" id="contact-company" name="company">
                     </div>
                     <div class="form-group">
-                        <div class="content">Email</div>
-                        <input type="email" class="form-control" id="contact-email">
+                        <div class="content">Email *</div>
+                        <input type="email" class="form-control" id="contact-email" name="email">
                     </div>
                     <div class="form-group">
-                        <div class="content">Enquiry</div>
-                        <textarea id="contact-enquiry" class="form-control"></textarea>
+                        <div class="content">Enquiry *</div>
+                        <textarea id="contact-enquiry" class="form-control" name="enquiry"></textarea>
                     </div>
-                    <button type="button" value="Submit" id="contact-submit" class="send-enquiry" autocomplete="off">Send</button>
+                    <button type="submit" value="Submit" id="contact-submit" class="send-enquiry" autocomplete="off">Send</button>
                 </div>
             </form>
+            <div id="thank-you" class="thank-you hidden">
+                <div class="thanks-icon icon-checkmark-circle"></div>
+                <div>Thank you for sending the enquiry.</div>
+                <div>I will get back to you soon.</div>
+            </div>
         </div>
         <div id="chat-now-card" class="section-card">
             <div class="caption">Chat Now</div>
             <div class="caption">Online.</div>
             <div class="chat-now">Chat Now</div>
         </div>
+
     </div>
 {% endblock %}

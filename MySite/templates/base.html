@@ -1,7 +1,8 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}Sheldon Rong - Web developer based in Sydney{% endblock %}</title>
+    <title>{% block title %}{% trans "Sheldon Rong - Web developer based in Sydney" %}{% endblock %}</title>
     {% block page-style %}{% endblock %}
     <script src="{{STATIC_URL}}js/utils/less.js"></script>
     {% block requirejs %}{% endblock %}
@@ -19,22 +20,22 @@
                     <li class="active">
                         <a href="/">
                             <span class="icon-home"></span> </span>
-                            <strong>Sheldon Rong</strong>
+                            <strong>{% trans "Sheldon Rong" %}</strong>
                         </a>
                     </li>
                     <li>
                         <a href="/portfolio">
-                            Portfolio
+                            {% trans "Portfolio" %}
                         </a>
                     </li>
                     <li>
                         <a href="/#contact-me">
-                            Contact
+                            {% trans "Contact" %}
                         </a>
                     </li>
                     <li>
                         <a>
-                            Chat Now
+                            {% trans "Chat Now" %}
                         </a>
                     </li>
                 </ul>

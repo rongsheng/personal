@@ -3,10 +3,9 @@ define(['utils/jquery',
     'apps/main/carousel'
     ], function($) {
 
-    var csrftoken = $.cookie('csrftoken');
-    console.log(csrftoken);
+    var csrfToken = $.cookie('csrftoken');
 
-    function csrfSafeMethod(method) {
+    function csrfSafe(method) {
         // these HTTP methods do not require CSRF protection
         return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
     }
@@ -14,22 +13,32 @@ define(['utils/jquery',
     $.ajaxSetup({
         crossDomain: false,
         beforeSend: function(xhr, settings) {
-            if (!csrfSafeMethod(settings.type)) {
-                // Send the token to same-origin, relative URLs only.
-                // Send the token only if the method warrants CSRF protection
-                // Using the CSRFToken value acquired earlier
-                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            if (!csrfSafe(settings.type)) {
+                xhr.setRequestHeader("X-CSRFToken", csrfToken);
             }
         }
     });
 
     $(document).ready(function() {
-        $('#contact-submit').click(function() {
+        $('#get-in-touch').on( "submit", function(e) {
+            e.preventDefault();
             //validate user inputs
 
+            //serialize data
+            var data = $(this).serializeArray();
             //send requests to server
             $.ajax({
-                url:
+                url: '/api/contact/',
+                type: 'POST',
+                dataType: 'json',
+                data: data,
+                context: this,
+                success: function() {
+                    $(this).hide().next().removeClass('hidden');
+                },
+                fail: function() {
+                    console.log('fail');
+                }
             });
         });
     });

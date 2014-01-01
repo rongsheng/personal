@@ -32,6 +32,7 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
@@ -47,13 +48,14 @@ TEMPLATE_DIRS = (
 # Application definition
 
 INSTALLED_APPS = (
+    'suit',  # django.suit admin template
+    'django_evolution',  # django evolution plugin to keep track of model changes
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
     'MySite',
 )
 
@@ -76,8 +78,10 @@ WSGI_APPLICATION = 'personal.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'personal',
+        'ENGINE': 'mysql_cymysql',
+        'USER': 'testuser',
+        'PASSWORD': '4Ft79nTCdfvx'
     }
 }
 
@@ -109,3 +113,5 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder"
 )
+
+SESSION_COOKIE_DOMAIN = '127.0.0.1'
