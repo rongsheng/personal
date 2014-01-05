@@ -1,10 +1,11 @@
 {% load i18n %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>{% block title %}{% trans "Sheldon Rong - Web developer based in Sydney" %}{% endblock %}</title>
     {% block page-style %}{% endblock %}
-    <script src="{{STATIC_URL}}js/utils/less.js"></script>
+    <script src="{%  static "js/utils/less.js" %}"></script>
     {% block requirejs %}{% endblock %}
 </head>
 <body>
@@ -47,8 +48,8 @@
         {% block content %}{% endblock %}
     </div>
 
-    <script src="{{STATIC_URL}}js/utils/jquery.js"></script>
-    <script src="{{STATIC_URL}}js/utils/bootstrap.js"></script>
+    <script src="{% static "js/utils/jquery.js" %}"></script>
+    <script src="{% static "js/utils/bootstrap.js" %}"></script>
     {% block js-libs %}
     {% endblock %}
 </body>
