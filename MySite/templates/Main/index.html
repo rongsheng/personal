@@ -2,7 +2,11 @@
 {% load staticfiles %}
 
 {% block page-style %}
+    {% if STAGING  %}
     <link rel="stylesheet/less" type="text/css" href="{% static "less/main.less" %}">
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+    {% endif %}
 {% endblock %}
 
 {% block requirejs %}

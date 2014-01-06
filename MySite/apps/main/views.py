@@ -12,7 +12,7 @@ class MainView(BaseView):
     template_name = 'Main/index.html'
 
     def get(self, request, *args, **kwargs):
-        return render(request, self.template_name, {})
+        return render(request, self.template_name, self.vars)
 
 
 class SubmitView(TemplateView):
