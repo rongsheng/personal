@@ -11,6 +11,7 @@
     {% block requirejs %}{% endblock %}
 </head>
 <body>
+    <div id="site-header-login-wrapper"></div>
     <header id="site-header" class="navbar navbar-fixed-top" role="banner">
         <div class="container" >
             <div class="navbar-header">
@@ -47,7 +48,7 @@
                         {% if is_auth %}
                             <a href="/logout">{{ username }} (Logout)</a>
                         {% else %}
-                            <a href="/login">Login</a>
+                            <a id="site-header-login">Login</a>
                         {% endif %}
                     </li>
                 </ul>

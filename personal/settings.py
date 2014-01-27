@@ -48,14 +48,15 @@ TEMPLATE_DIRS = (
 # Application definition
 
 INSTALLED_APPS = (
-    'suit',  # django.suit admin template
-    'django_evolution',  # django evolution plugin to keep track of model changes
+    #
+    # 'suit',  # django.suit admin template
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'MySite',
 )
 
@@ -105,6 +106,7 @@ USE_TZ = True
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, '/static/'),
+    '/Users/sheldon/Web/personal/MySite/static/'
 )
 
 STATIC_URL = '/static/'
@@ -115,3 +117,16 @@ STATICFILES_FINDERS = (
 )
 
 SESSION_COOKIE_DOMAIN = '127.0.0.1'
+
+REST_FRAMEWORK = {
+    # Use hyperlinked styles by default.
+    # Only used if the `serializer_class` attribute is not set on a view.
+    'DEFAULT_MODEL_SERIALIZER_CLASS':
+        'rest_framework.serializers.HyperlinkedModelSerializer',
+
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

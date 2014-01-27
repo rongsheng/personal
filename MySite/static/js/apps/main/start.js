@@ -7,19 +7,23 @@ requirejs.config({
         'utils/underscore': {
             exports: '_'
         },
+        'utils/backbone': {
+            deps: ['utils/underscore', 'utils/jquery'],
+            export: 'Backbone'
+        },
         'utils/bootstrap': {
-            deps: ['jquery'],
-            exports: 'bootstrap'
+            deps: ['utils/jquery'],
+            exports: 'Bootstrap'
         },
         'utils/raf': {
             exports: 'requestAnimationFrame'
         },
         'utils/jquery.lettering': {
-            deps: ['jquery'],
+            deps: ['utils/jquery'],
             exports: 'jQuery.fn.lettering'
         },
         'utils/jquery.textillate': {
-            deps: ['jquery', 'utils/raf'],
+            deps: ['utils/jquery', 'utils/raf'],
             exports: 'jQuery.fn.textillate'
         }
     }

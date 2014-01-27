@@ -29,7 +29,7 @@ class SubmitView(TemplateView):
                     'errors': form.errors,
                 }
                 return HttpResponse(json.dumps(response_data), content_type="application/json")
-        except Exception, ex:
+        except Exception as ex:
             response_data = {
                 'status': 'failed',
                 'error': str(ex)

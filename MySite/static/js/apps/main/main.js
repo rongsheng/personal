@@ -1,6 +1,7 @@
 define(['utils/jquery',
     'utils/jquery.cookie',
-    'apps/main/carousel'
+    'apps/main/carousel',
+    'apps/main/header',
     ], function($) {
 
     var csrfToken = $.cookie('csrftoken');
