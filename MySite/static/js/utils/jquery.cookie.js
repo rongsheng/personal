@@ -1,19 +1,5 @@
-/*!
- * jQuery Cookie Plugin v1.4.0
- * https://github.com/carhartl/jquery-cookie
- *
- * Copyright 2013 Klaus Hartl
- * Released under the MIT license
- */
-(function (factory) {
-	if (typeof define === 'function' && define.amd) {
-		// AMD. Register as anonymous module.
-		define(['utils/jquery'], factory);
-	} else {
-		// Browser globals.
-		factory(jQuery);
-	}
-}(function ($) {
+define(['utils/jquery'
+    ], function ($) {
 
 	var pluses = /\+/g;
 
@@ -111,4 +97,4 @@
 		return !$.cookie(key);
 	};
 
-}));
+});
