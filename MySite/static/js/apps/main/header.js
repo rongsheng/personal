@@ -1,7 +1,7 @@
-define(['utils/jquery',
-    'utils/underscore',
-    'utils/backbone',
-    'utils/bootstrap',
+define(['jquery',
+    'underscore',
+    'backbone',
+    'bootstrap',
     'text!templates/login.html'
     ], function($, _, backbone, Bootstrap, LoginTemplate) {
 

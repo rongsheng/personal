@@ -1,33 +1,40 @@
 requirejs.config({
     baseUrl: '/static/js',
+    paths: {
+        jquery: 'utils/jquery',
+        underscore: 'utils/underscore',
+        backbone: 'utils/backbone',
+        bootstrap: 'utils/bootstrap',
+        raf: 'utils/raf',
+        jquery_lettering: 'utils/jquery.lettering',
+        jquery_textillate: 'utils/jquery.textillate',
+        jquery_cookie: 'utils/jquery.cookie'
+    },
     shim: {
-        'utils/jquery': {
-            exports: 'jQuery'
+        'underscore': {
+            exports: '_'
         },
-        'utils/underscore': {
-            exports: 'underscore'
-        },
-        'utils/backbone': {
-            deps: ['utils/underscore', 'utils/jquery'],
+        'backbone': {
+            deps: ['underscore', 'jquery'],
             export: 'Backbone'
         },
-        'utils/bootstrap': {
-            deps: ['utils/jquery'],
+        'bootstrap': {
+            deps: ['jquery'],
             exports: 'Bootstrap'
         },
-        'utils/raf': {
+        'raf': {
             exports: 'requestAnimationFrame'
         },
-        'utils/jquery.lettering': {
-            deps: ['utils/jquery'],
+        'jquery_lettering': {
+            deps: ['jquery'],
             exports: 'jQuery.fn.lettering'
         },
-        'utils/jquery.textillate': {
-            deps: ['utils/jquery', 'utils/raf'],
+        'jquery_textillate': {
+            deps: ['jquery', 'raf'],
             exports: 'jQuery.fn.textillate'
         },
-        'utils/jquery.cookie': {
-            deps: ['utils/jquery'],
+        'jquery_cookie': {
+            deps: ['jquery'],
             exports: 'jQuery.fn.cookie'
         }
     }

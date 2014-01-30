@@ -1,5 +1,5 @@
-define(['utils/jquery',
-    'utils/jquery.cookie',
+define(['jquery',
+    'jquery_cookie',
     'apps/main/carousel',
     'apps/main/header',
     ], function($) {
