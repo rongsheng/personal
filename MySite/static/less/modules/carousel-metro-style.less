@@ -5,11 +5,26 @@
        &.visible {
            visibility: visible;
        }
+       &.color-red {
+           background-color: darkred;
+       }
+       &.color-darkyellow {
+           background-color: darkgoldenrod;
+       }
        &.color-brand {
            background-color: @brand-primary;
        }
        &.color-blueviolet {
            background-color: blueviolet;
+       }
+       &.color-vegigreen {
+           background-color: olivedrab;
+       }
+       &.color-sanybrown {
+           background-color: sandybrown;
+       }
+       &.color-warmred {
+           background-color: orangered;
        }
        &.color-cyan {
            background-color: #00BBF1;
@@ -25,22 +40,51 @@
        }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 320px) {
         .carousel-indicators {
-            left: 95%;
+            left: 90%;
+            bottom: 5%;
         }
         .carousel-caption {
             width: 100%;
             bottom: 0;
             left: 0;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            .caption-title, .caption-subtitle {
+              padding: 0 10px;
+              margin: 3px 0;
+            }
+            .caption-title {
+              float: left;
+              display: inline-block;
+              font-size: 18px;
+            }
+            .caption-subtitle {
+              float: left;
+              display: inline-block;
+              font-size: 14px;
+            }
+        }
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        .carousel-indicators {
+            left: 90%;
+        }
+        .carousel-caption {
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
             .caption-title, .caption-subtitle {
               padding-left: 20px;
               padding-right: 20px;
+              margin-top: 5px;
+              margin-bottom: 5px;
             }
             .caption-title {
-              margin-top: 10px;
               font-size: 28px;
             }
             .caption-subtitle {
@@ -51,11 +95,10 @@
 
     @media (min-width: 768px) {
         .carousel-caption {
-            right: 5%;
-            width: 30%;
-            margin-bottom: 5%;
+            width: 38%;
+            margin-bottom: 1%;
             min-height: 200px;
-            left: 65%;
+            left: 60%;
             .caption-title, .caption-subtitle {
               padding-left: 20px;
               padding-right: 20px;

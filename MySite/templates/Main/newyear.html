@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block page-style %}
+    {% if STAGING  %}
+    <link rel="stylesheet/less" type="text/css" href="{% static "less/main.less" %}">
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+    {% endif %}
+{% endblock %}
+
+{% block requirejs %}
+    <script data-main="{% static "js/apps/main/start" %}" src="{% static "js/require.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="carousel-wrapper">
+        <div id="carousel-headline" class="carousel carousel-metro slide">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-headline" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-headline" data-slide-to="1"></li>
+                <li data-target="#carousel-headline" data-slide-to="2"></li>
+                <li data-target="#carousel-headline" data-slide-to="3"></li>
+                <li data-target="#carousel-headline" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img data-desktop="{% static "image/newyear-welcome.jpg" %}"
+                        data-mobile="{% static "image/newyear-welcome-mobile.jpg" %}" alt="happy new year, snow!">
+                    <div class="carousel-caption color-red">
+                        <h3 class="caption-title">梁雪，新春快乐</h3>
+                        <p class="caption-subtitle">愿我们马年吉祥，马到成功</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img data-desktop="{% static "image/newyear-home.jpg" %}"
+                        data-mobile="{% static "image/newyear-home-mobile.jpg" %}" alt="stick together">
+                    <div class="carousel-caption color-darkyellow">
+                        <h3 class="caption-title">贴得更紧</h3>
+                        <p class="caption-subtitle">身处两地，随时随地想着你</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img data-desktop="{% static "image/newyear-sweethome.jpg" %}"
+                        data-mobile="{% static "image/newyear-sweethome-mobile.jpg" %}" alt="a vista">
+                    <div class="carousel-caption color-sanybrown">
+                        <h3 class="caption-title">憧憬未来</h3>
+                        <p class="caption-subtitle">和你一起建立温馨的家，实现心中的梦想</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img data-desktop="{% static "image/newyear-nj-snacks.jpg" %}"
+                        data-mobile="{% static "image/newyear-nj-snacks-mobile.jpg" %}" alt="nanjing-snacks">
+                    <div class="carousel-caption color-vegigreen">
+                        <h3 class="caption-title">鸭血粉丝汤</h3>
+                        <p class="caption-subtitle">南京特色小吃，Nom Nom Nom!</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img data-desktop="{% static "image/newyear-atmosphere.jpg" %}"
+                        data-mobile="{% static "image/newyear-atmosphere-mobile.jpg" %}" alt="new-year-atmosphere">
+                    <div class="carousel-caption color-warmred">
+                        <h3 class="caption-title">南京新春街景</h3>
+                        <p class="caption-subtitle">送你一丝新春的暖意</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about-me" class="info-section color-lightgrey">
+        <div class="intro">亲爱的！送你的新春礼物，希望你喜欢！</div>
+        <ul>
+            <li>
+                <div class="title">使用电脑或将手机横置以获得最佳体验</div>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

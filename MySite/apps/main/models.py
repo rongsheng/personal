@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -14,3 +15,14 @@ class Enquiry(models.Model):
     class Meta:
         app_label = "MySite"
         verbose_name_plural = "Enquiries"
+
+
+class ChatUser(models.Model):
+    user = models.OneToOneField(User)
+    company = models.CharField(max_length=255)
+
+    def __unicode__(self):
+        return self.first_name + ' ' + self.last_name
+
+    class Meta:
+        app_label = "MySite"

@@ -15,6 +15,13 @@ class MainView(BaseView):
         return render(request, self.template_name, self.vars)
 
 
+class NewYearView(BaseView):
+    template_name = 'Main/newyear.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, self.vars)
+
+
 class SubmitView(TemplateView):
     def post(self, request):
         try:
