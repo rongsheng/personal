@@ -2,10 +2,10 @@ requirejs.config({
     baseUrl: '/static/js',
     shim: {
         'utils/jquery': {
-            exports: '$'
+            exports: 'jQuery'
         },
         'utils/underscore': {
-            exports: '_'
+            exports: 'underscore'
         },
         'utils/backbone': {
             deps: ['utils/underscore', 'utils/jquery'],
