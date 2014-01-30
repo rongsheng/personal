@@ -25,6 +25,10 @@ requirejs.config({
         'utils/jquery.textillate': {
             deps: ['utils/jquery', 'utils/raf'],
             exports: 'jQuery.fn.textillate'
+        },
+        'utils/jquery.cookie': {
+            deps: ['utils/jquery'],
+            exports: 'jQuery.fn.cookie'
         }
     }
 });

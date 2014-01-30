@@ -1,6 +1,4 @@
-define(['utils/jquery'
-    ], function ($) {
-
+(function ($) {
 	var pluses = /\+/g;
 
 	function encode(s) {
@@ -96,5 +94,4 @@ define(['utils/jquery'
 		$.cookie(key, '', $.extend({}, options, { expires: -1 }));
 		return !$.cookie(key);
 	};
-
-});
+})(jQuery);
