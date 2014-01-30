@@ -1,5 +1,5 @@
 define(['jquery',
-    'jquery_cookie',
+    'jquery.cookie',
     'apps/main/carousel',
     'apps/main/header',
     ], function($) {

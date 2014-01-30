@@ -1,8 +1,8 @@
 define(['jquery',
         'raf',
         'bootstrap',
-        'jquery_lettering',
-        'jquery_textillate'
+        'jquery.lettering',
+        'jquery.textillate'
     ], function($) {
         var animate = function($el) {
             var $activeItem = $el.find('.item.active');

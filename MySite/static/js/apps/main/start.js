@@ -1,14 +1,5 @@
 requirejs.config({
     baseUrl: '/static/js',
-    paths: {
-        underscore: 'underscore',
-        backbone: 'backbone',
-        bootstrap: 'bootstrap',
-        raf: 'raf',
-        jquery_lettering: 'jquery.lettering',
-        jquery_textillate: 'jquery.textillate',
-        jquery_cookie: 'jquery.cookie'
-    },
     shim: {
         'jquery': {
             exports: '$'
