@@ -27,15 +27,15 @@ requirejs.config({
         'raf': {
             exports: 'requestAnimationFrame'
         },
-        'jquery_lettering': {
+        'jquery.lettering': {
             deps: ['jquery'],
             exports: 'jQuery.fn.lettering'
         },
-        'jquery_textillate': {
+        'jquery.textillate': {
             deps: ['jquery', 'raf'],
             exports: 'jQuery.fn.textillate'
         },
-        'jquery_cookie': {
+        'jquery.cookie': {
             deps: ['jquery'],
             exports: 'jQuery.fn.cookie'
         }
