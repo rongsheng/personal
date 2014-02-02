@@ -7,5 +7,5 @@ from django.conf import settings
 class BaseView(TemplateView):
     template_name = 'base.html'
     vars = {
-        'STAGING': getattr(settings, "DEBUG", "")
+        'STAGING': getattr(settings, "STAGING", "")
     }
