@@ -9,5 +9,6 @@
     dir: "../../build",
     modules: [
       {  name: "apps/main/start"  }
-    ]
+    ],
+    preserveLicenseComments: false,
 })
