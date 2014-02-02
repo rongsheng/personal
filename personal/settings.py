@@ -21,7 +21,9 @@ SECRET_KEY = '5)1gt(21birl19=puu_q53$i@+5)_l1x_073cxrwxt)nm+!h5k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
+
+STAGING = False
 
 ALLOWED_HOSTS = []
 
