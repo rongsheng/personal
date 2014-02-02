@@ -1,12 +1,12 @@
 requirejs.config({
     baseUrl: '/static/js',
     shim: {
-        'underscore': {
-            exports: '_'
-        },
         'backbone': {
             deps: ['underscore', 'jquery'],
             export: 'Backbone'
+        },
+        'underscore': {
+            exports: '_'
         },
         'bootstrap': {
             deps: ['jquery'],
