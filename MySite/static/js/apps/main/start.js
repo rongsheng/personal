@@ -26,6 +26,9 @@ requirejs.config({
         'jquery.cookie': {
             deps: ['jquery'],
             exports: 'jQuery.fn.cookie'
+        },
+        'less': {
+            exports: 'less'
         }
     }
 });
