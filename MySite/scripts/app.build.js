@@ -11,4 +11,5 @@
       {  name: "apps/main/start"  }
     ],
     preserveLicenseComments: false,
+    mainConfigFile: "../static/js/apps/main/start.js"
 })

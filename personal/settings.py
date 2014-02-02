@@ -106,7 +106,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 #STATIC_ROOT = "/home/jacob/projects/mysite.com/sitestatic"
 
-STATIC_ROOT = '/Users/sheldon/Web/personal/MySite/static/'
+STATICFILES_DIRS = (
+    '/home/ubuntu/web/MySite/static/',
+)
+
+STATIC_ROOT = '/home/ubuntu/web/MySite/build/'
 
 STATIC_URL = '/static/'
 
