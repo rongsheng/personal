@@ -1,9 +1,6 @@
 requirejs.config({
     baseUrl: '/static/js',
     shim: {
-        'jquery': {
-            exports: '$'
-        },
         'underscore': {
             exports: '_'
         },
