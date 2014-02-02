@@ -110,7 +110,7 @@ STATICFILES_DIRS = (
     '/home/ubuntu/web/MySite/static/',
 )
 
-STATIC_ROOT = '/home/ubuntu/web/MySite/build/'
+STATIC_ROOT = '/home/ubuntu/web/build/'
 
 STATIC_URL = '/static/'
 
