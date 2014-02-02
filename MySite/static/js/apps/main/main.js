@@ -4,6 +4,10 @@ define(['jquery',
     'apps/main/header',
     ], function($) {
 
+    if (typeof STAGING != 'undefined' && STAGING === true) {
+        require(['less']);
+    }
+
     var csrfToken = $.cookie('csrftoken');
 
     function csrfSafe(method) {
